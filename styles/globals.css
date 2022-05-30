@@ -5,6 +5,7 @@ body {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   background: black;
   height: 100%;
+  overflow-x: hidden;
 }
 
 input {
@@ -28,6 +29,11 @@ input {
   width: 100%;
   resize: none;
   color: white;
+  word-wrap: break-word;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 a {
