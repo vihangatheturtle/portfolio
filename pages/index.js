@@ -38,7 +38,7 @@ export default function Home() {
     } else if (cmd == "about") {
       addText(`Hi there!<br>I'm <b>Vihanga Weerasinghe</b><br><br>I mostly work on back-end server-side code however also do front-end ui.<br><br><b>How can I contact you?</b><br>Discord: <b>Turtlee#2000</b><br>Twitter: <b><a&rpsp;href="https://twitter.com/Vihanganator"&rpsp;target="_blank">@Vihanganator</a></b><br>Telegram: <b><a&rpsp;href="https://t.me/Turtlee2k"&rpsp;target="_blank">@Turtlee2k</a></b><br>Email: <b><a&rpsp;href="mailto:me@vinga.xyz">me@vinga.xyz</a></b>`, cmd);
     } else if (cmd == "github") {
-      addText(`A lot of my projects are open source on GitHub<br>Come check it out!<br><br><a&rpsp;href="https://github.com/vihangatheturtle"&rpsp;target="_blank">View VihangaTheTurtle on GitHub</a>`, cmd);
+      addText(`A lot of my projects are open source on GitHub<br>Come check it out!<br><br><a&rpsp;href="https://github.com/vihangatheturtle"&rpsp;target="_blank">View VihangaTheTurtle on GitHub</a><br><a&rpsp;href="https://github.com/vihangatheturtle/portfolio"&rpsp;target="_blank">This website is open source!</a>`, cmd);
     } else if (cmd == "projects") {
       addText(`Over time I have had the chance to work on many amazing projects<br>Here is a list of a few projects I have worked on:<br><br><a&rpsp;href="https://discord.gg/F6mgbRF7vj"&rpsp;target="_blank">Cosmos Softwares (formerly Cosmos AIO)</a><br> - Used to be a sneaker bot but has been recently<br>   transformed into the main software development<br>   company for most of my other projects<br><br><a&rpsp;href="https://hovermint.com"&rpsp;target="_blank">Hover Mint</a><br> - NFT bot supporting MonkeLabs, CMID V2 and<br>   Fractal with upcoming support for Magic Eden<br><br><a&rpsp;href="https://filestream.cosmos-softwares.com"&rpsp;target="_blank">Cosmos FileStream</a><br> - Instant file sharing via a simple 6-digit code<br><br><a&rpsp;href="https://discord.gg/27WRy2dtNG"&rpsp;target="_blank">Coin Enterprise</a><br> - Custom and prebuilt software development for<br>   other businesses<br><br>Hover AIO (discontinued)<br> - One of my first sneaker bots I developed<br><br><a&rpsp;href="https://discord.gg/PSQaMTMwXr"&rpsp;target="_blank">Hover Raffles</a><br> - EU raffle bot supporting 7 sites<br><br><a&rpsp;href="https://solanaroyale.com"&rpsp;target="_blank">Solana Royale</a><br> - Next-gen Solana based online casino`, cmd)
     } else if (cmd == "clear") {
@@ -53,6 +53,7 @@ export default function Home() {
     if (!dontAddCommandLine)
       t = `<br><span className="input" style="float: left; word-wrap: break-word; width: 100%;"><span style="color: lime">visitor@vinga.xyz</span>:<span style="color: CornflowerBlue">~</span>$&nbsp;${cmd}</span>` + t;
     outputBox.current.innerHTML += t.split('\n').join('<br>').split('&rpsp;').join(' ');
+    document.getElementsByClassName("input")[0].scrollIntoView();
   }
 
   useEffect(() => {
